@@ -1,0 +1,360 @@
+/* CSS Document */
+*, *::after, *::before {
+    box-sizing:border-box;  
+}
+  
+*{
+    margin: 0;
+    padding: 0;
+}
+  
+@font-face {
+    font-family: 'Futura-Condensed-Extra-Bold';
+    src: url(../assets/Futura-Condensed-Extra-Bold.otf);
+}
+  
+html {
+    width: 100%;
+    height: 100vh;
+}
+  
+body {
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+  
+  
+/* header */ 
+
+header nav ul {
+    display: flex;
+    gap: 2em;
+}
+  
+header nav ul li:first-of-type {
+    margin-right: auto;
+}
+  
+header section {
+    background-color: #F5F5F5;
+    padding: 1em;
+    font-size: .75em;
+    text-align: center;
+}
+  
+header section a {
+    color: #111111;
+    font-weight: 500;
+}
+
+header nav {
+    padding:  1.25em;
+}
+
+header nav li img {
+    height: 1.25em;
+}
+
+/* main */
+
+main {
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+}
+
+main section {
+    padding-bottom: 5em;
+}
+
+main section img {
+    margin-bottom: 1em;
+}
+
+main section a {
+    text-decoration: none;
+    color: #111111;
+}
+
+/* sections in de main */
+
+main section:first-of-type p:first-of-type, main section:nth-of-type(5) p {
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: .25em;
+}
+
+main section:first-of-type a~a, main section:nth-of-type(5) a~a, main section:nth-of-type(7) a~a {
+    color: white;
+    background: black;
+    border-radius: 20px;
+    text-align: center;
+    display: inline-block;
+    padding: .5em 1.75em;
+    margin-top: 1.5em;
+    margin-right: .25em;
+    line-height: 1.5;
+}
+
+main section:nth-of-type(2) p:last-of-type, main section:nth-of-type(4) p:last-of-type  {
+    color: #757575;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+main section:nth-of-type(2) img~p, main section:nth-of-type(4) img~p {
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: .25em;
+    margin-top: .25em;
+}
+
+main section:nth-of-type(5) a p:last-of-type {
+    font-weight: normal;
+}
+
+main section:nth-of-type(3) article, main section:nth-of-type(6) article, main section:nth-of-type(7) article, main section:nth-of-type(8) article {
+    position: relative;
+}
+
+main section:nth-of-type(3) article a p, main section:nth-of-type(3) article a~a, main section:nth-of-type(6) article a p, main section:nth-of-type(6) article a~a, main section:nth-of-type(7) article h3, main section:nth-of-type(7) article p, main section:nth-of-type(7) article a~a, main section:nth-of-type(8) article a~a{
+    position: absolute;
+}
+
+main section:nth-of-type(3) article a p, main section:nth-of-type(3) article a~a, main section:nth-of-type(6) article a p, main section:nth-of-type(6) article a~a {
+    left: 1.5em;
+    bottom: 7em;
+    color: white;
+}
+
+main section:nth-of-type(3) article a~a, main section:nth-of-type(6) article a~a, main section:nth-of-type(8) article a~a {
+    bottom: 3em;
+    color: black;
+    text-decoration: none;
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+    padding: .5em 1.75em;
+    margin-top: 1.5em;
+    margin-right: .25em;
+    line-height: 1.5;
+}
+
+main section:nth-of-type(7) a h3 {
+    font-size: 3em;
+    text-transform: uppercase;
+    font-family: 'Futura-Condensed-Extra-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+main section:nth-of-type(7) article h3 {
+    left: .45em;
+    bottom: 3em;
+}
+
+main section:nth-of-type(7) article p {
+    left: 1.5em;
+    bottom: 6.5em;
+}
+
+main section:nth-of-type(7) article a~a {
+    left: 1.5em;
+    bottom: 2.5em;
+}
+
+main section:nth-of-type(8) article a~a {
+    left: 1.5em;
+}
+
+/* scrollable sections in de main */
+
+main section:nth-of-type(2), main section:nth-of-type(4), main section:nth-of-type(8) {
+    display: flex;
+    overflow-x: auto;
+}
+
+main section:nth-of-type(2) a, main section:nth-of-type(4) a, main section:nth-of-type(8) article {
+    flex-shrink: 0;
+    width: 90%;
+}
+
+main section:nth-of-type(2) a article, main section:nth-of-type(4) a article, main section:nth-of-type(8) a {
+    margin-right: .75em
+}
+
+/* members */
+
+main section article.members {
+    position: relative;
+} 
+
+main section article.members img~img {
+    position: absolute;
+    width: 2em;
+    left: .75em;
+    top: .75em;
+}
+
+/* footer */
+
+footer {
+    background-color: black;
+    padding: 1.25em;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer p {
+    color: #757575;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    font-size: .75em;
+}
+
+footer ul:first-child li a {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: .875em;
+}
+
+footer ul:first-child li {
+    padding-bottom: .75em;
+}
+
+footer details {
+    padding-bottom: 1.5em;
+}
+
+footer details > summary {
+    color: white;
+    text-transform: uppercase;
+    font-size: .875em;
+}
+
+footer details ul li a {
+    color: #757575;
+    font-weight: 400;
+}
+
+footer ul:nth-of-type(2) {
+    width: 12em;
+    display: flex;
+    margin-bottom: 1.5em;
+}
+
+footer ul:nth-of-type(2) li {
+    margin-right: 1em;
+}
+
+footer ul:last-of-type li a, footer ul:last-of-type p {
+    color: #757575;
+}
+
+footer ul:last-of-type li {
+    padding-top: 1.25em;
+    font-size: .75em;
+}
+
+footer > a {
+    font-size: .625em;
+}
+
+img#locatie{
+    width: .75em;
+    margin-right: .5em;
+}
+
+
+
+/* details */
+details > summary {
+    list-style: none;
+    color:  #111111;
+    font-weight: 500;
+    margin-bottom: 1.5em;
+}
+
+main details ul li a {
+    color: #757575;
+    font-weight: 500;
+}
+
+main details ul li {
+    margin-left: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+/* images */
+
+img {
+      width: 100%;
+}
+
+/* headings */
+
+h1 {
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+/* paragraphs */
+
+main section:first-of-type p~p {
+    color: #111111;
+    font-family: 'Futura-Condensed-Extra-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 3em;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: -1px;
+    word-wrap: break-word;
+    /* bron: https://www.w3schools.com/cssref/css3_pr_word-wrap.asp */
+}
+
+p.exclusive {
+    color: #aa8375;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+p.custom {
+    background: linear-gradient(to left,
+                    indigo,
+                    blue,
+                    green,
+                    yellow,
+                    orange,
+                    red);
+        -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+    font-size: .875em;
+    line-height: 1.5;
+}
+/* bron: https://www.geeksforgeeks.org/how-to-create-multicolored-text-in-a-web-page-using-html-css/ */
+
+/* span */
+
+span {
+    font-weight: 500;
+    line-height: 1.5;
+    color: #111111;
+
+}
+
+span.sale {
+    text-decoration: line-through;
+}
+
+/* ul */
+
+ul {
+    list-style: none;
+}
