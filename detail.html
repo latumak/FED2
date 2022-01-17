@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="nl">
+	
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="jouw naam">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Nike</title>
+	
+	<link href="styles/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html" target="_self"><img src="images/nike.png" alt="nike logo"></a></li>
+				<li><a href="#"><img src="images/winkelwagen.png" alt="winkelwagen icoon"></a></li>
+				<li><a href="#"><img src="images/zoeken.png" alt="zoek icoon"></a></li>
+				<li><a href="#"><img src="images/menu.png" alt="hamburger menu icoon"></a></li>
+			</ul>
+
+            <label class="switch">
+                <input type="checkbox" id="toggle">
+                <span class="slider"></span>
+            </label>
+		</nav>
+
+		<section>
+			<p>Bestel op tijd om je bestelling op tijd voor de feestdagen in huis te hebben.</p>
+			<a href="#">Shop</a>
+			<a href="#">Help</a>
+		</section>
+	</header>
+
+    <main id="detail">
+        <h1>Lifestyle Paris Saint-Germain (44)</h1>
+        <audio id="audio">
+            <!-- Bron muziek: https://www.youtube.com/watch?v=fFlOx8JqAOo -->
+            <source src="audio/psg_anthem.mp3" type="audio/mpeg">
+        </audio>
+
+        <nav>
+            <a href="#">Schoenen</a>
+            <a href="#">Tops En T-Shirts</a>
+            <a href="#">Hoodies En Sweatshirts</a>
+            <a href="#">Jassen En Bodywarmers</a>
+            <a href="#">Broeken En Tights</a>
+            <a href="#">Shorts</a>
+            <a href="#">Trainingspakken</a>
+            <a href="#">Accessoires En Gear</a>
+        </nav>
+
+        <section>
+            <p>44 Resultaten</p>
+            <button type="button" class="filter">
+                Filter
+                <img src="images/detail/filter-icon.png" alt="filter icoon">
+            </button>
+        </section>
+
+        <section>
+
+            <button type="button">
+                <img src="images/detail/kruisje.png" alt="kruis icoon">
+            </button>
+
+            <h2>Filter</h2>
+
+            <form>
+                <fieldset>
+                    <legend>Sorteer op:</legend>
+                        <input type="radio" id="uitgelicht" name="sorteren" checked>
+                        <label for="uitgelicht">Uitgelicht</label>
+
+                        <input type="radio" id="nieuwst" name="sorteren">
+                        <label for="nieuwst">Nieuwst</label>
+
+                        <input type="radio" id="prijs_hoog_laag" name="sorteren">
+                        <label for="uitgelicht">Prijs: Hoog-Laag</label>
+
+                        <input type="radio" id="prijs_laag_hoog" name="sorteren">
+                        <label for="uitgelicht">Prijs: Laag-Hoog</label>
+                </fieldset> 
+
+                <fieldset>
+                    <legend>Voetbalclubs wereldwijd (1)</legend>
+                        <input type="checkbox" id="fc_barcelona" name="voetbalclubs">
+                        <label for="fc_barcelona">FC Barcelona</label>
+
+                        <input type="checkbox" id="paris_saint_germain" name="voetbalclubs" checked>
+                        <label for="paris_saint_germain">Paris Saint-Germain</label>
+
+                        <input type="checkbox" id="liverpool_fc" name="voetbalclubs">
+                        <label for="liverpool_fc">Liverpool F.C.</label>
+
+                        <input type="checkbox" id="chelsea_fc" name="voetbalclubs">
+                        <label for="chelsea_fc">Chelsea F.C.</label>
+
+                        <button type="button">+ meer</button>
+                </fieldset> 
+
+                <fieldset>
+                    <legend>Geslacht</legend>
+                        <input type="checkbox" id="heren" name="geslacht">
+                        <label for="heren">Heren</label>
+
+                        <input type="checkbox" id="dames" name="geslacht">
+                        <label for="dames">Dames</label>
+
+                        <input type="checkbox" id="unisex" name="geslacht">
+                        <label for="unisex">Unisex</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Kids</legend>
+                        <input type="checkbox" id="jongens" name="kids">
+                        <label for="jongens">Jongens</label>
+
+                        <input type="checkbox" id="meisjes" name="kids">
+                        <label for="meisjes">Meisjes</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Leeftijd van kids</legend>
+                        <input type="checkbox" id="baby_peuters" name="leeftijd_kids">
+                        <label for="baby_peuters">Baby's en peuters</label>
+
+                        <input type="checkbox" id="kleuters" name="leeftijd_kids">
+                        <label for="kleuters">Kleuters</label>
+                    
+                        <input type="checkbox" id="kids" name="leeftijd_kids">
+                        <label for="kids">Kids</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Shop op prijs</legend>
+                        <input type="checkbox" id="0_50" name="shop_prijs">
+                        <label for="0_50">&euro;0 - &euro;50</label>
+
+                        <input type="checkbox" id="50_100" name="shop_prijs">
+                        <label for="50_100">&euro;50 - &euro;100</label>
+
+                        <input type="checkbox" id="100_150" name="shop_prijs">
+                        <label for="100_150">&euro;100 - &euro;150</label>
+
+                        <input type="checkbox" id="150" name="shop_prijs">
+                        <label for="150">&euro;150+</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Type tenue</legend>
+                        <input type="checkbox" id="thuis" name="tenue">
+                        <label for="thuis">Home</label>
+
+                        <input type="checkbox" id="uit" name="tenue">
+                        <label for="uit">Uit</label>
+                    
+                        <input type="checkbox" id="derde" name="tenue">
+                        <label for="derde">Derde</label>
+
+                        <input type="checkbox" id="aangepast" name="tenue">
+                        <label for="aangepast">Aangepast</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Kleur</legend>
+
+                    <div>
+                        <button type="button">
+                            <img src="images/detail/filter_kleur/zwart-patch.png" alt="zwarte patch">
+                            Zwart
+                        </button>
+
+                        <button type="button">
+                            <img src="images/detail/filter_kleur/blauw-patch.png" alt="blauwe patch">
+                            Blauw
+                        </button>
+
+                        <button type="button">
+                            <img src="images/detail/filter_kleur/bruin-patch.png" alt="bruine patch">
+                            Bruin
+                        </button>
+
+                        <button type="button">
+                            <img src="images/detail/filter_kleur/groen-patch.png" alt="groene patch">
+                            Groen
+                        </button>
+
+                        <button type="button">
+                            <img src="images/detail/filter_kleur/grijs-patch.png" alt="grijze patch">
+                            Grijs
+                        </button>
+
+                        <button type="button">
+                            <img src="images/detail/filter_kleur/roze-patch.png" alt="roze patch">
+                            Roze
+                        </button>
+
+                        <button type="button">
+                            <img src="images/detail/filter_kleur/paars-patch.png" alt="paarse patch">
+                            Paars
+                        </button>
+
+                        <button type="button">
+                            <img src="images/detail/filter_kleur/rood-patch.png" alt="rode patch">
+                            Rood
+                        </button>
+
+                        <button type="button">
+                            <img src="images/detail/filter_kleur/wit-patch.png" alt="witte patch">
+                            Wit
+                        </button>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Atleten</legend>
+                        <input type="checkbox" id="mbappe" name="atleten">
+                        <label for="mbappe">Kylian Mbappé</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Sale</legend>
+                        <input type="checkbox" id="sale" name="sale">
+                        <label for="sale">Sale</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Type sluiting</legend>
+                        <input type="checkbox" id="nauwsluitend" name="type_sluiting">
+                        <label for="nauwsluitend">Nauwsluitende pasvorm</label>
+                </fieldset>
+
+                <!-- bron fieldset: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset -->
+            </form>
+
+            <div>
+                <button type="submit">Pas toe</button>
+            </div>
+
+        </section>
+
+        <section>
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-gewatteerd-herenjack.jpeg" alt="paris saint-germain gewatteerd herenjack">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+
+                    <p class="special">Bestseller</p>
+                    <p>Paris Saint-Germain</p>
+                    <p>Gewatteerd herenjack</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 189,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-statement-fleecehoodie-heren.jpeg" alt="paris saint-germain statement fleecehoodie heren">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Statement fleecehoodie voor heren</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 99,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-ma-1-herenjack.jpeg" alt="paris saint-germain ma-1 herenjack">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+
+                    <p>Paris Saint-Germain</p>
+                    <p>MA-1 herenjack</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 199,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/zion-1-kinderschoen.jpeg" alt="zion-1 kinderschoen">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Zion 1</p>
+                    <p>Kinderschoen</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 89,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-fleecehoodie-heren.jpeg" alt="paris saint-germain fleecehoodie heren">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Fleecehoodie voor heren</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 79,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-statement-fleecebroek-heren.jpeg" alt="paris saint-germain statement fleecebroek heren">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Statement Fleecebroek voor heren</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 89,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-t-shirt-met-logo-heren.jpeg" alt="paris saint-germain t-shirt met logo heren">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>T-shirt met logo voor heren</p>
+                    <p>2 kleuren</p>
+                    <span>&euro; 34,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-fleecebroek-heren.jpeg" alt="paris saint-germain fleecebroek heren">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button"> 
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Fleecebroek voor heren</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 79,99</span>
+                </article>
+            </a>
+            
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-t-shirt-heren.jpeg" alt="paris saint-germain t-shirt heren">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>T-shirt voor heren</p>
+                    <p>2 kleuren</p>
+                    <span>&euro; 34,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-t-shirt-met-lange-mouwen-heren.jpeg" alt="paris saint-germain t-shirt met lange mouwen heren">  
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+
+                    <p>Paris Saint-Germain</p>
+                    <p>T-shirt met lange mouwen voor heren</p>
+                    <p>2 kleuren</p>
+                    <span>&euro; 44,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-fleecehoodie-dames.jpeg" alt="paris saint-germain fleecehoodie dames">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Fleecehoodie voor dames</p>
+                    <p>3 kleuren</p>
+                    <span>&euro; 84,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-t-shirt-met-korte-mouwen-dames-.jpeg" alt="paris saint-germain t-shirt met korte mouwen dames">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>T-shirt met korte mouwen voor dames</p>
+                    <p>2 kleuren</p>
+                    <span>&euro; 39,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-awf-geweven-voetbaljack-met-capuchon-heren.jpeg" alt="paris saint-germain awf-geweven voetbaljack met capuchon heren">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p class="special">Uitgesloten van actie</p>
+                    <p>Paris Saint-Germain AWF</p>
+                    <p>Geweven voetbaljack met capuchon voor heren</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 109,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-voetbaltrainingsbroek-met-rits-en-dri-fit-heren.jpeg" alt="paris saint-germain voetbaltrainingsbroek met rits en dri fit heren">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p class="special">Uitgesloten van actie</p>
+                    <p>Paris Saint-Germain</p>
+                    <p>Nike voetbaltrainingsbroek met rits en Dri-FIT voor heren</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 84,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-voetbalhoodie-van-fleece-met-halflange-rits-heren.jpeg" alt="paris saint-germain voetbalhoodie van fleece met halflange rits heren">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p class="special">Uitgesloten van actie</p>
+                    <p>Paris Saint-Germain</p>
+                    <p>Voetbalhoodie van fleece met halflange rits voor heren</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 84,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-hoodie.jpeg" alt="paris saint-germain hoodie">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p class="special">Net binnen</p>
+                    <p>Paris Saint-Germain</p>
+                    <p>Hoodie voor meisjes</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 54,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-jongensbroek.jpeg" alt="paris saint-germain jongensbroek">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p class="special">Net binnen</p>
+                    <p>Paris Saint-Germain</p>
+                    <p>Jongensbroek</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 59,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-fleecebroek-dames.jpeg" alt="paris saint-germain fleecebroek dames">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Fleecebroek voor dames</p>
+                    <p>2 kleuren</p>
+                    <span>&euro; 74,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-geweven-damesjack.jpeg" alt="paris saint-germain geweven damesjack">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Geweven damesjack</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 119,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/jordan-ma2-paris-saint-germain-schoen.jpeg" alt="jordan-ma2 paris saint-germain- choen">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Jordan MA2 Paris Saint-Germain</p>
+                    <p>Schoen</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 139,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-t-shirt-met-korte-mouwen-dames.jpeg" alt="paris saint-germain t-shirt met korte mouwen dames">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>T-shirt met korte mouwen voor dames</p>
+                    <p>2 kleuren</p>
+                    <span>&euro; 34,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-damesshorts-met-print.jpeg" alt="paris saint-germain damesshorts met print">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Damesshorts met print</p>
+                    <p>2 kleuren</p>
+                    <span>&euro; 59,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-voetbalshirt-heren.jpeg" alt="paris saint-germain voetbalshirt heren">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p class="special">Uitgesloten van actie</p>
+                    <p>Paris Saint-Germain</p>
+                    <p>Voetbalshirt voor heren</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 29,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-club-fleece-sweatshirt-heren.jpeg" alt="paris saint-germain club fleece sweatshirt heren">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p class="special">Uitgesloten van actie</p>
+                    <p>Paris Saint-Germain Club Fleece</p>
+                    <p>Sweatshirt voor heren</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 59,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-damestop-met-print-en-korte-mouwen.jpeg" alt="paris saint-germain damestop met print en korte-mouwen">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Damestop met print en korte mouwen</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 64,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-effen-damestop-met-korte-mouwen.jpeg" alt="paris saint germain effen damestop met korte mouwen">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Effen damestop met korte mouwen</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 59,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-club-fleece-hoodie-heren.jpeg" alt="paris saint-germain club fleece hoodie heren">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p class="special">Uitgesloten van actie</p>
+                    <p>Paris Saint-Germain Club Fleece</p>
+                    <p>Hoodie voor heren</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 64,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-voetbalshirt-heren-zwart-roze.jpeg" alt="paris saint-germain voetbalshirt heren zwart roze">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+
+                    <p class="special">Uitgesloten van actie</p>
+                    <p>Paris Saint-Germain Club Fleece</p>
+                    <p>Voetbalshirt voor heren</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 29,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-voetbalbroek-van-fleece-heren-zwart-roze.jpeg" alt="paris saint-germain voetbalbroek van fleece heren zwart roze">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Voetbalbroek van fleece voor heren</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 54,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/jordan-ma2-paris-saint-germain-damesschoen.jpeg" alt="jordan-ma2 paris saint-germain damesschoen">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Jordan MA2 Paris Saint-Germain</p>
+                    <p>Damesschoen</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 139,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-synthetic-fill-herenjack-van-fleece.jpeg" alt="paris saint-germain synthetic fill herenjack van fleece">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p class="special">Uitgesloten van actie</p>
+                    <p>Paris Saint-Germain Synthethic-Fill/p>
+                    <p>Herenjack van fleece</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 119,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-legging.jpeg" alt="paris saint germain legging">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Legging voor meisjes</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 44,99</span>
+                </article>
+            </a>
+            
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-heritage86-pet-.jpeg" alt="paris saint-germain heritage86 pet">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p class="special">Duurzame materialen</p>
+                    <p>Paris Saint-Germain Heritage86</p>
+                    <p>Pet</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 22,47</span> <span>&euro; 29,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-t-shirt-heren-blauw-wit.jpeg" alt="paris saint-germain t-shirt heren blauw wit">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>T-shirt voor heren</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 33,97</span> <span>&euro; 44,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-fleecebroek-heren-blauw.jpeg" alt="paris saint-germain fleecebroek heren blauw">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Fleecebroek voor heren</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 56,47</span> <span>&euro; 74,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-t-shirt-heren-blauw.jpeg" alt="paris saint-germain t-shirt heren blauw">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>T-shirt voor heren</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 26,47</span> <span>&euro; 34,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-damesjack.jpeg" alt="paris saint-germain damesjack">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Damesjack</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 89,97</span> <span>&euro; 119,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-club-volksliedjack-heren.jpeg" alt="paris saint-germain club volksliedjack heren">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Club Volksliedjack voor heren</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 112,47</span> <span>&euro; 149,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-vissershoedje-met-graphic.jpeg" alt="paris saint-germain vissershoedje met graphic">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Vissershoedje met graphic</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 24,97</span> <span>&euro; 32,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-statement-fleecehoodie-heren-blauw.jpeg" alt="paris saint-germain statement fleecehoodie heren blauw">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Statement fleecehoodie voor heren</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 74,97</span> <span>&euro; 99,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-jumpman-herenshorts-blauw.jpeg" alt="paris saint-germain jumpman herenshorts blauw">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Herenshorts</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 41,47</span> <span>&euro; 54,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-fleecehoodie-heren-blauw.jpeg" alt="paris saint-germain fleecehoodie heren blauw">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Fleecehoodie voor heren</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 59,97</span> <span>&euro; 79,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-t-shirt-met-korte-mouwen-dames-paars.jpeg" alt="paris saint-germain t-shirt met korte mouwen dames paars">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>T-shirt met korte mouwen voor dames</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 31,97</span> <span>&euro; 39,99</span>
+                </article>
+            </a>
+
+            <a href="#">
+                <article>
+                    <img src="images/detail/paris-saint-germain-statement-t-shirt-heren.jpeg" alt="paris saint-germain statement t-shirt heren">
+                    <button type="button">
+                        <img src="images/detail/liken.png" alt="like button">
+                    </button>
+                    
+                    <p>Paris Saint-Germain</p>
+                    <p>Statement T-shirt voor heren</p>
+                    <p>1 kleur</p>
+                    <span>&euro; 33,97</span> <span>&euro; 44,99</span>
+                </article>
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <ul>
+			<li><a href="#">Cadeaubonnen</a></li>
+			<li><a href="#">Zoek een store</a></li>
+			<li><a href="#">Meld je aan voor e-mails</a></li>
+			<li><a href="#">Word member</a></li>
+			<li><a href="#">Studentenkorting</a></li>
+			<li><a href="#">Feedback</a></li>
+		</ul>
+
+		<details>
+			<summary>Help</summary>
+			<ul>
+				<li><a href="#">Bestelstatus</a></li>
+				<li><a href="#">Verzending en levering</a></li>
+				<li><a href="#">Retourzingen</a></li>
+				<li><a href="#">Betaalmethodes</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Nike promotiecodes hulp</a></li>
+			</ul>
+		</details>
+
+		<details>
+			<summary>Over Nike</summary>
+			<ul>
+				<li><a href="#">Nieuws</a></li>
+				<li><a href="#">Werken bij Nike</a></li>
+				<li><a href="#">Investeerders</a></li>
+				<li><a href="#">Duurzaamheid</a></li>
+			</ul>
+		</details>
+
+		<ul>
+			<li><a href="#"><img src="images/twitter.png" alt="twitter icoon"></a></li>
+			<li><a href="#"><img src="images/facebook.png" alt="facebook icoon"></a></li>
+			<li><a href="#"><img src="images/youtube.png" alt="youtube icoon"></a></li>
+			<li><a href="#"><img src="images/instagram.png" alt="instagram icoon"></a></li>
+		</ul>
+
+		<a href="#">
+            <img src="images/location.png" id="locatie" alt="locatie icoon">Nederland
+        </a>
+		
+        <p>© 2021 Nike, Inc. Alle rechten voorbehouden</p>
+
+		<ul>
+			<li><a href="#">Handleidingen</a></li>
+			<li><a href="#">Algemene voorwaarden</a></li>
+			<li><a href="#">Verkoopvoorwaarden</a></li>
+			<li><a href="#">Bedrijfsgegevens</a></li>
+			<li><a href="#">Privacy- en cookiebeleid</a></li>
+			<li><a href="#">cookie-instellingen</a></li>
+		</ul>
+
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
